@@ -16,3 +16,14 @@ def test_list_order():
     store.add_entry(e2)
     ids = [e.id for e in store.list_entries()]
     assert ids == [e1.id, e2.id]
+
+
+def test_journal_core_alias():
+    import journal_core
+
+    assert journal_core.JournalEntry is JournalEntry
+
+    store = journal_core.MemoryStorage()
+    e = journal_core.JournalEntry(text="Alias")
+    store.add_entry(e)
+    assert store.get_entry(e.id) is e
