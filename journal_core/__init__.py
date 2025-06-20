@@ -1,6 +1,15 @@
-"""Compatibility wrapper for the old :mod:`journal_core` package.
+"""Compatibility wrapper for the legacy :mod:`journal_core` package.
 
-This module now simply re-exports the public API from :mod:`journal` so that
-imports like ``import journal_core`` continue to work."""
+The original project exposed a package called ``journal_core`` which has since
+been renamed simply to :mod:`journal`.  To preserve backwards compatibility,
+this lightweight module re-exports the public API from :mod:`journal`.
+"""
 
-from journal import *
+from importlib import import_module
+
+_j = import_module("journal")
+
+JournalEntry = _j.JournalEntry
+MemoryStorage = _j.MemoryStorage
+
+__all__ = list(_j.__all__)
