@@ -250,6 +250,8 @@ garden_state (JSON)
 
 ✨ MVP & Immersive UX Scope Summary
 
+*(This game is delivered as a single-page web app. All navigation happens through overlays and modals rather than loading new pages.)*
+
 Feature
 
 Must Have
