@@ -327,9 +327,9 @@ To run the project locally using Django:
    python3 -m venv venv
    source venv/bin/activate
    ```
-2. Install Django.
+2. Install the required Python packages.
    ```bash
-   pip install django
+   pip install -r requirements.txt
    ```
 3. Apply database migrations.
    ```bash
