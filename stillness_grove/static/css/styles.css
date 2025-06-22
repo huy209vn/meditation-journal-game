@@ -68,4 +68,12 @@ body {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.button-row.show-buttons {
+    opacity: 1;
+    transform: translateY(0);
 }
