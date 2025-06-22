@@ -316,3 +316,26 @@ Meditation Mode
 
 JS + Django Integration
 
+## Development Setup
+
+To run the project locally using Django:
+
+1. Create and activate a virtual environment.
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+2. Install Django.
+   ```bash
+   pip install django
+   ```
+3. Apply database migrations.
+   ```bash
+   cd stillness_grove
+   python manage.py migrate
+   ```
+4. Start the development server.
+   ```bash
+   python manage.py runserver
+   ```
+   Then open `http://localhost:8000/` in your browser.
